@@ -47,7 +47,6 @@ function showValues( obj ) {
 }
 
 
-
 ////////// PROBLEM 2 //////////
 
 /*
@@ -58,7 +57,7 @@ function showValues( obj ) {
 
 function greaterThan10(obj){
   for (var key in obj){
-    if(obj[key] > 10){
+    if (obj[key] > 10){
       obj[key] = 0;
     }
   } return obj;
@@ -76,10 +75,9 @@ function greaterThan10(obj){
 
 function double(obj){
   for (var key in obj){
-    obj[key] = obj[key] * 2;
+    obj[key] *= 2;
   } return obj;
 }
-
 
 
 ////////// PROBLEM 4 //////////
@@ -92,15 +90,14 @@ function double(obj){
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-function secrets(obj){
+function secrets (obj){
   var empStr = '';
   for (var key in obj){
-    if (key.startsWith("sh")){
-      empStr = empStr + obj[key];
+    if(key.startsWith("sh")){
+      empStr += obj[key];
     }
   } return empStr;
 }
-
 
 
 /* 
@@ -132,12 +129,11 @@ function secrets(obj){
 
 function removePassword(obj){
   for (var key in obj){
-    if(key === "password"){
+    if (key === 'password'){
       delete obj[key];
     }
   } return obj;
 }
-
 
 
 ////////// PROBLEM 6 //////////
@@ -174,12 +170,11 @@ for (var key in deleteTheBigNumbers){
 
 function startsWithK(obj){
   for (var key in obj){
-    if (key.startsWith('k')){
+    if (key.startsWith("k")){
       delete obj[key];
     }
   } return obj;
 }
-
 
 
 ////////// PROBLEM 8 //////////
@@ -195,10 +190,9 @@ function startsWithK(obj){
 
 function hiddenTreasure(obj){
   for (var key in obj){
-    if (obj[key].includes('treasure') === false){
+    if(!obj[key].includes('treasure')){
       delete obj[key];
     }
   } return obj;
 }
-
 

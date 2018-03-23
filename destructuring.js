@@ -55,8 +55,8 @@ function greeting( obj ) {
 
 function totalPopulation(obj){
   var {utah, california, texas, arizona} = obj;
-  var total = utah + california + texas + arizona;
-  return total;
+  var totalNum = utah + california + texas + arizona;
+  return totalNum;
 }
 
 
@@ -72,12 +72,10 @@ function totalPopulation(obj){
 */
 
 function ingredients(obj){
+  var newArr = [];
   var {carb, fat, protein} = obj;
-  var ingArr= [];
-  ingArr.push(carb);
-  ingArr.push(fat);
-  ingArr.push(protein);
-  return ingArr;
+  newArr.push(carb, fat, protein);
+  return newArr;
 }
 
 
@@ -125,5 +123,4 @@ function numberGroups({a, b, c}){
     return c;
   }
 }
-
 
